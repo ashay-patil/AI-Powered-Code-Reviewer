@@ -1,0 +1,78 @@
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Layout */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main .right {
+  color: black;
+}
+/* Left Panel - Code Input */
+main .left {
+  background-color: #000000;
+  padding: 1rem;
+}
+
+.left textarea {
+  flex-grow: 1;
+  background-color: #0c0c0c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Review Button */
+.review-button {
+  margin-top: 1rem;
+  align-self: flex-end;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Right Panel - Review Output */
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  border-radius: 0.7rem;
+}
